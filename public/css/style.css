@@ -1,32 +1,53 @@
+/* FONTS */
+@font-face {
+    font-family: "Eina";
+    src: url("../font/Eina01-Regular.ttf") format("truetype");
+}
+
+a {
+    color:#b03a3a;
+}
+
+audio {
+    display:none;
+}
+
+/** DOC **/
+
 html, body {
     margin:0;
-    height:100%;
+    min-height:100%;
     width:100%;
     overflow:hidden;
     display:flex;
     flex-direction:column;
+    font-family: "Eina";
+    font-size:24px;
 }
 
-
+/** HTML **/
 html {
     margin:auto;
 }
 
+/** TITLE **/
 #title {
     margin:auto;
+    margin-top:50px;
     margin-bottom:50px;
     display:flex;
 }
 
 #title > img {
     margin:auto;
-    height:300px;
+    height:200px;
 }
 
+/** BABY **/
 #baby {
     margin:auto;
     margin-bottom: 50px;
-    margin-top: 50px;
+    margin-top:-50px;
     display:flex;
 }
 
@@ -34,10 +55,34 @@ html {
     margin:auto;
     transform: rotate(45deg);
     max-width: 150px;
+    animation: bounce 5s ease infinite;
 }
 
+/** LINKS **/
+#links {
+    display: flex;
+}
+#links a {
+    margin:10px;
+}
+#links a:first-of-type {
+    margin-left:auto;
+}
+#links a:last-of-type {
+    margin-right:auto;
+}
+#links a {
+    padding:10px 20px;
+    border:1px solid #b03a3a;
+    border-radius: 24px;
+    text-decoration: none;
+}
+
+/** FOOTER **/
 #footer {
     margin:auto;
+    margin-top:50px;
+    margin-bottom:50px;
     display:flex;
 }
 
@@ -47,4 +92,14 @@ html {
 
 #footer > #inspe > img {
     max-width:250px;
+}
+
+
+
+
+/** ANIM **/
+@keyframes bounce{
+    from {transform: rotate(45deg) translateY(20px) translateX(20px);}
+    50%  {transform: rotate(45deg) translateY(0px) translateX(0px);}
+    to   {transform: rotate(45deg) translateY(20px) translateX(20px);}
 }
