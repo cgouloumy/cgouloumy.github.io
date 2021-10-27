@@ -1,0 +1,50 @@
+html, body {
+    margin:0;
+    height:100%;
+    width:100%;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+}
+
+
+html {
+    margin:auto;
+}
+
+#title {
+    margin:auto;
+    margin-bottom:50px;
+    display:flex;
+}
+
+#title > img {
+    margin:auto;
+    height:300px;
+}
+
+#baby {
+    margin:auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    display:flex;
+}
+
+#baby > img {
+    margin:auto;
+    transform: rotate(45deg);
+    max-width: 150px;
+}
+
+#footer {
+    margin:auto;
+    display:flex;
+}
+
+#footer > #inspe {
+    margin:auto;
+}
+
+#footer > #inspe > img {
+    max-width:250px;
+}
