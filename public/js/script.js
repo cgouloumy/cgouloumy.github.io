@@ -4,7 +4,7 @@ function removeCharacter(str){
 
 function addClass(button) {
     $(button).addClass('focus')
-    $("#play").focus();
+    $("#play").get(0).focus();
 }
 function remClass() {
     $('.focus').removeClass('focus')
@@ -20,7 +20,7 @@ $('#links > a').click(function() {
         console.log("stop");
         playing = 0;
         oaudio = audio;
-        audio = new Audio("public/sound/" + removeCharacter($(this).attr('href') + ".mp3"));
+        audio = new Audio("public/sound/" + removeCharacter($(this).attr('href') + ".wav"));
         remClass();
         if (oaudio != audio) {
             audio.play();
@@ -29,7 +29,7 @@ $('#links > a').click(function() {
             addClass($(this))
         }
     } else if (playing == 0) {
-        audio = new Audio("public/sound/" + removeCharacter($(this).attr('href') + ".mp3"));
+        audio = new Audio("public/sound/" + removeCharacter($(this).attr('href') + ".wav"));
         audio.play();
         console.log("play");
         playing = 1;
