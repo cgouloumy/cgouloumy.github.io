@@ -4,6 +4,7 @@ function removeCharacter(str){
 
 function addClass(button) {
     $(button).addClass('focus')
+    $("#play").focus();
 }
 function remClass() {
     $('.focus').removeClass('focus')
