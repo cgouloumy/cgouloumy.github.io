@@ -2,6 +2,13 @@ function removeCharacter(str){
     return str.substring(1)
 }
 
+function addClass(button) {
+    $(button).addClass('focus')
+}
+function remClass() {
+    $('.focus').removeClass('focus')
+}
+
 var audio;
 var playing = 0;
 
@@ -13,10 +20,12 @@ $('#links > a').click(function() {
         playing = 0;
         oaudio = audio;
         audio = new Audio("public/sound/" + removeCharacter($(this).attr('href') + ".mp3"));
+        remClass();
         if (oaudio != audio) {
             audio.play();
             console.log("play");
             playing = 1;
+            addClass($(this))
         }
     } else if (playing == 0) {
         audio = new Audio("public/sound/" + removeCharacter($(this).attr('href') + ".mp3"));
@@ -24,10 +33,21 @@ $('#links > a').click(function() {
         console.log("play");
         playing = 1;
         $('#stop').css('display', 'flex');
+        addClass($(this))
     }
 });
 
+
+
 $('#stop').click(function() {
     audio.pause();
-    $(this).css('display', 'none');
+    audio.currentTime = 0;
+})
+
+$('#pause').click(function() {
+    audio.pause();
+})
+
+$('#play').click(function() {
+    audio.play();
 })

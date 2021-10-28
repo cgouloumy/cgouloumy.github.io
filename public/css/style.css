@@ -7,12 +7,6 @@
 a {
     color:#b03a3a;
 }
-a:hover,
-a:focus {
-    color:white;
-    background-color: #b03a3a;
-} 
-
 
 audio {
     display:none;
@@ -83,15 +77,72 @@ html {
     border-radius: 24px;
     text-decoration: none;
 }
+#links a:hover,
+#links a:focus,
+#links a.focus {
+    color:white;
+    background-color: #b03a3a;
+} 
 
-/** STOP **/
+/** ACTIONS **/
+#actions {
+    display:flex;
+    min-width:250px;
+    max-width:250px;
+    margin:auto;
+} 
+
+#play {
+    display:flex;
+    margin:auto;
+    margin-top:50px;
+    display : inline-block;
+    height : 0;
+    width : 0;
+    border-top : 18px solid transparent;
+    border-bottom : 18px solid transparent;
+    border-left: 36px solid #9e3434;
+}
+#play:hover,
+#play:focus {
+    border-top : 18px solid transparent;
+    border-bottom : 18px solid transparent;
+    border-left : 36px solid #b03a3a;
+}
+
+#pause {
+    background-color:#9e3434;
+    display:flex;
+    margin:auto;
+    margin-top:50px;
+    height:36px;
+    width:36px;
+    position:relative;
+}
+#pause:after {
+    content:'';
+    position:absolute;
+    height:36px;
+    width:12px;
+    left:12px;
+    background-color:white;
+}
+#pause:hover,
+#pause:focus {
+    background-color:#b03a3a;
+}
+
 #stop {
     display:flex;
     margin:auto;
     margin-top:50px;
+    height:36px;
+    width:36px;
+    background-color:#9e3434;
+}
+#stop:hover,
+#stop:focus {
     background-color:#b03a3a;
-    height:35px;
-    width:35px;
 }
 
 /** FOOTER **/
